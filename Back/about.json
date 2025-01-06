@@ -1,0 +1,344 @@
+{
+    "server": {
+        "services": [{
+            "name":"GitHub",
+            "description":"Github est une entreprise de développement et services logiciels sise aux États-Unis. Github développe notamment la plateforme Github, la structure Electron.",
+            "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Font_Awesome_5_brands_github.svg/1200px-Font_Awesome_5_brands_github.svg.png",
+            "actions": [{
+                "name":"push added",
+                "actionId": 1,
+                "description":"A push is made on a repository",
+                "params": [{"repo": "repository_name"}]
+                    }, {
+                "name":"pull request created",
+                "actionId": 2,
+                "description":"A pull request is made on a repository",
+                "params": [{"repo": "repository_name"}]
+                    }, {
+                "name":"issue created",
+                "actionId": 3,
+                "description":"An issue is made on a repository",
+                "params": [{"repo": "repository_name"}]
+                    }, {
+                "name": "branch/tag created",
+                "actionId": 4,
+                "description": "A branch or a tag is created on a repository",
+                "params": [{"repo": "repository_name"}]
+                    },{
+                "name": "branch/tag deleted",
+                "actionId": 6,
+                "description": "A branch or a tag is deleted on a repository",
+                "params": [{"repo": "repository_name"}]
+                    },{
+                "name": "issue deleted",
+                "actionId": 7,
+                "description": "An issue is deleted on a repository",
+                "params": [{"repo": "repository_name"}]
+                    },{
+                "name": "pull request deleted",
+                "actionId": 8,
+                "description": "A pull request is deleted on a repository",
+                "params": [{"repo": "repository_name"}]
+                    }, {
+                "name": "star created",
+                "actionId": 9,
+                "description": "A star is created on a repository",
+                "params": [{"repo": "repository_name"}]
+                    },{
+                "name": "Issues/Pull requests comment added",
+                "actionId": 10,
+                "description": "A comment is added on an issue or a pull request",
+                "params": [{"repo": "repository_name"}]
+                    },{
+                "name": "member added",
+                "actionId": 11,
+                "description": "A member is added on a repository",
+                "params": [{"repo": "repository_name"}]
+                    }],
+            "reactions": [{
+                "name":"create issue",
+                "reactionId": 1,
+                "description":"Create an issue on a repository",
+                "params": [{"repo": "repository_name", "title": "issue_title", "body": "issue_body"}]
+                    },{
+                "name":"create pull request",
+                "reactionId": 2,
+                "description":"Create a pull request on a repository",
+                "params": [{"repo": "repository_name", "title": "pull_request_title", "body": "pull_request_body", "head": "pull_request_head", "base": "pull_request_base"}]
+                }, {
+                "name": "Create comment Issue",
+                "reactionId": 43,
+                "description": "Create a comment on an issue",
+                "params": [{"repo": "repository_name", "issue_id": "issue id", "body": "body"}]
+                }]
+            },{
+            "name": "Google",
+            "description": "Google est une entreprise américaine de services technologiques fondée en 1998 dans la Silicon Valley, en Californie, par Larry Page et Sergey Brin, créateurs du moteur de recherche Google. C'est une filiale de la société Alphabet depuis août 2015.",
+            "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/800px-Google_%22G%22_Logo.svg.png",
+            "reactions": [{
+                "name": "Create Sheet",
+                "reactionId": 22,
+                "description": "Create a sheet",
+                "params": [{"title": "title"}]
+            },{
+                "name": "Send Email",
+                "reactionId": 23,
+                "description": "Send an email",
+                "params": [{"to": "to", "subject": "subject", "body": "body"}]
+            }]
+            },{
+            "name": "Microsoft",
+            "description": "Microsoft Corporation est une multinationale informatique et micro-informatique américaine, fondée en 1975 par Bill Gates et Paul Allen. Microsoft fait partie des principales capitalisations boursières du NASDAQ, aux côtés d'Apple et d'Amazon. En 2018, le chiffre d'affaires s’élevait à 110,36 milliards de dollars.",
+            "logo_url": "https://download.logo.wine/logo/Microsoft_Outlook/Microsoft_Outlook-Logo.wine.png",
+            "actions" : [],
+            "reactions":[{
+                "name": "create event",
+                "reactionId": 4,
+                "description": "Create an event in your calendar",
+                "params": [{"title": "event_title", "start": "event_start(format: YYYY/MM/DD)", "end": "event_end(format: YYYY/MM/DD)"}]
+                },{
+                "name": "create draft",
+                "reactionId": 9,
+                "description": "create a draft mail",
+                "params": [{"to": "mail_to", "subject": "mail_subject", "body": "mail_body"}]
+                },{
+                "name": "Create Calendar Group",
+                "reactionId": 10,
+                "description": "create a calendar group",
+                "params": [{"name": "name of the group"}]
+                },{
+                "name": "Create Calendar",
+                "reactionId": 11,
+                "description": "create a calendar",
+                "params": [{"name": "name of the calendar"}]
+                },{
+                "name": "Create Outlook Category",
+                "reactionId": 12,
+                "description": "create a category",
+                "params": [{"displayName": "name of the category"}]
+                },{
+                }]
+            },{
+            "name": "Spotify",
+            "description": "Spotify est un service suédois de streaming musical sous la forme d'un logiciel propriétaire et d'un site web. Cette plateforme de distribution numérique permet une écoute quasi instantanée de fichiers musicaux.",
+            "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/768px-Spotify_logo_without_text.svg.png",
+            "actions": [],
+            "reactions": [{
+                "name": "create playlist",
+                "reactionId": 5,
+                "description": "create a playlist",
+                "params": [{"playlist": "playlist_name"}]
+            }, {
+                "name": "add item to playlist",
+                "reactionId": 6,
+                "description": "add a track to a playlist",
+                "params": [{"playlist_id": "playlist_id", "item_uri": "item"}]
+            }, {
+                "name": "delete item from playlist",
+                "reactionId": 7,
+                "description": "delete a track from a playlist",
+                "params": [{"playlist_id": "playlist_id", "item_uri": "item"}]
+            }, {
+                "name": "change playlist details",
+                "reactionId": 8,
+                "description": "change the details of a playlist",
+                "params": [{"playlist_id": "playlist_id", "new_playlist_name": "new_playlist_name", "new_playlist_description": "new_playlist_description"}]
+            }, {
+                "name": "save playlist",
+                "reactionId": 16,
+                "description": "save a playlist on user's library",
+                "params": [{"playlist_id": "playlist_id"}]
+            }, {
+                "name": "remove playlist",
+                "reactionId": 17,
+                "description": "remove a playlist from user's library",
+                "params": [{"playlist_id": "playlist_id"}]
+            }, {
+                "name": "save audibook",
+                "reactionId": 18,
+                "description": "save a audibook on user's library",
+                "params": [{"audibook_id": "audibook_id"}]
+            }, {
+                "name": "remove audiobook",
+                "reactionId": 19,
+                "description": "remove a audiobook from user's library",
+                "params": [{"audiobook_id": "audiobook_id"}]
+            }, {
+                "name": "save episode",
+                "reactionId": 20,
+                "description": "save a episode on user's library",
+                "params": [{"episode_id": "episode_id"}]
+            }, {
+                "name": "remove episode",
+                "reactionId": 21,
+                "description": "remove a episode from user's library",
+                "params": [{"episode_id": "episode_id"}]
+            }
+        ]
+        }, {
+            "name": "Instagram",
+            "description": "Instagram est une application, un réseau social et un service de partage de photos et de vidéos fondés et lancés en octobre 2010 par l'Américain Kevin Systrom et le Brésilien Michel Mike Krieger.",
+            "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/768px-Instagram-Icon.png",
+            "actions": [],
+            "reactions": []
+        }, {
+            "name": "Notion",
+            "description": "Notion est un logiciel de prise de notes et de gestion de projets. Il est disponible sur navigateur web, macOS, iOS et Android. Il est développé par Notion Labs Inc, une start-up basée à San Francisco.",
+            "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Notion_app_logo.png/768px-Notion_app_logo.png",
+            "actions": [],
+            "reactions": [{
+                "name": "create page notion",
+                "reactionId": 13,
+                "description": "create a page",
+                "params": [{"parent_id": "parent", "title": "title"}]
+                }, {
+                "name": "create comment notion",
+                "reactionId": 14,
+                "description": "create a comment",
+                "params": [{"parent_id": "parent", "comment": "comment"}]
+            },{
+                "name": "create database",
+                "reactionId": 24,
+                "description": "create a database",
+                "params": [{"parent_id": "parent", "title": "title"}]
+            },{
+                "name": "rename Page",
+                "reactionId": 25,
+                "description": "rename a page",
+                "params": [{"page_id": "page_id", "title": "title"}]
+            },{
+                "name": "rename database",
+                "reactionId": 26,
+                "description": "rename a database",
+                "params": [{"database_id": "database_id", "title": "title"}]
+            }]
+        }, {
+            "name": "Figma",
+            "description": "Figma est un outil de conception d'interface utilisateur et de prototypage basé sur le Web, avec une option de partage en temps réel. Il permet aux utilisateurs de collaborer sur un projet en temps réel et de modifier le même fichier. Le logiciel est disponible pour les systèmes d'exploitation Windows et macOS.",
+            "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/768px-Figma-logo.svg.png",
+            "actions": [],
+            "reactions": [{
+                "name": "Add Comment",
+                "reactionId": 15,
+                "description": "Add a comment",
+                "params": [{"file_key": "file key", "comment": "message"}]
+            }]
+        }, {
+            "name": "Linear",
+            "description": "Linear est un outil de gestion de projet pour les équipes logicielles. Il est construit pour accélérer le développement de logiciels en aidant les équipes à collaborer plus efficacement et à être plus productive.",
+            "logo_url": "https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/1f571644-39f9-4a0d-a4eb-0dd6eea62a00/f=auto,q=95,fit=scale-down,metadata=none",
+            "actions": [],
+            "reactions": [{
+                "name": "Create Issue",
+                "reactionId": 27,
+                "description": "Create an issue",
+                "params": [{"title": "title", "team_id": "team_id"}]
+            }, {
+                "name": "Change Name",
+                "reactionId": 28,
+                "description": "Change Name",
+                "params": [{"name": "name"}]
+            }, {
+                "name": "Create Comment",
+                "reactionId": 29,
+                "description": "Create a comment",
+                "params": [{"issue_id": "issue_id", "body": "body"}]
+            }]
+        }, {
+            "name": "Gitlab",
+            "description": "GitLab est un service web de gestion de développement logiciel utilisant Git repository. Il est développé par GitLab Inc. Le code source de GitLab est disponible sous licence MIT et le logiciel est écrit en Ruby.",
+            "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/GitLab_icon.svg/2127px-GitLab_icon.svg.png",
+            "actions": [],
+            "reactions": [{
+                "name": "Create Issue",
+                "reactionId": 31,
+                "description": "Create a Issue",
+                "params": [{"project_id": "project id", "title": "title", "description": "description"}]
+            }, {
+                "name": "Delete Issue",
+                "reactionId": 32,
+                "description": "Delete a Issue",
+                "params": [{"project_id": "project id", "issue_id": "issue id"}]
+            }, {
+                "name": "Create Branch",
+                "reactionId": 39,
+                "description": "Create a Branch",
+                "params": [{"project_id": "project id", "branch_name": "branch name", "ref": "ref"}]
+            }, {
+                "name": "Delete Branch",
+                "reactionId": 40,
+                "description": "Delete a Branch",
+                "params": [{"project_id": "project id", "branch_name": "branch name"}]
+            }, {
+                "name": "Create Merge Request",
+                "reactionId": 41,
+                "description": "Create a Merge Request",
+                "params": [{"project_id": "project id", "source_branch": "source branch", "target_branch": "target branch", "title": "title", "description": "description"}]
+            }, {
+                "name": "Delete Merge Request",
+                "reactionId": 42,
+                "description": "Delete a Merge Request",
+                "params": [{"project_id": "project id", "merge_request_id": "merge request id"}]
+            }]
+        }, {
+            "name": "Twitch",
+            "description": "Twitch est un service de streaming et de VOD de jeu vidéo, de sport électronique et d'émissions apparentées lancé en juin 2011. Le site a été créé afin d'avoir un espace où les utilisateurs pouvaient diffuser leurs parties de jeu vidéo en direct.",
+            "logo_url": "https://cdn.icon-icons.com/icons2/3041/PNG/512/twitch_logo_icon_189242.png",
+            "actions": [],
+            "reactions": [{
+                "name": "Create Clip",
+                "reactionId": 30,
+                "description": "Create a Clip",
+                "params": [{"broadcaster_id": "broadcaster_id"}]
+            }]
+        }, {
+            "name": "Slack",
+            "description": "Slack est un logiciel de messagerie instantanée et de collaboration en équipe développé par Slack Technologies. Il propose de nombreux services comme la création de groupes privés, l'envoi de messages privés et le partage de fichiers.",
+            "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Slack_Icon.png/768px-Slack_Icon.png",
+            "actions": [],
+            "reactions": [{
+                "name": "Send Message",
+                "reactionId": 33,
+                "description": "Send a Message",
+                "params": [{"channel": "channel", "text": "text"}]
+            }, {
+                "name": "Leave Channel",
+                "reactionId": 34,
+                "description": "Leave a Channel",
+                "params": [{"channel": "channel"}]
+            }, {
+                "name": "Rename Channel",
+                "reactionId": 35,
+                "description": "Rename a Channel",
+                "params": [{"channel": "channel", "name": "name"}]
+            }]
+        },{
+            "name": "Dropbox",
+            "description": "Dropbox est un service de stockage et de partage de copies de fichiers locaux en ligne proposé par Dropbox, Inc., entreprise localisée à San Francisco, en Californie, aux États-Unis. Il permet à ses utilisateurs de mettre en ligne puis de partager des fichiers et dossiers avec d'autres personnes en utilisant des liens privés ou publics.",
+            "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Dropbox_Icon.svg/826px-Dropbox_Icon.svg.png",
+            "actions": [],
+            "reactions": [{
+                "name": "Delete File",
+                "reactionId": 36,
+                "description": "Delete a File",
+                "params": [{"path": "path"}]
+            }, {
+                "name": "Copy File",
+                "reactionId": 37,
+                "description": "Copy a File",
+                "params": [{"from_path": "from_path", "to_path": "to_path"}]
+            }]
+        }, {
+            "name": "Medium",
+            "description": "Medium est une plateforme de blogs américaine, lancée en août 2012 par Evan Williams, cofondateur de Twitter. Medium est une plateforme de publication de billets de blog, qui permet aux utilisateurs inscrits de publier des articles sur une multitude de sujets.",
+            "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Medium_logo_Monogram.svg/768px-Medium_logo_Monogram.svg.png",
+            "actions": [],
+            "reactions": [{
+                "name": "Create Post",
+                "reactionId": 38,
+                "description": "Create a Post",
+                "params": [{"title": "title" , "content": "content"}]
+            }]
+        }]
+    }
+}

@@ -1,0 +1,57 @@
+version: "3"
+
+volumes:
+  db-data:
+  apk:
+
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - back
+
+  server:
+    build:
+      context: ./Back/
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8080:3000"
+    environment:
+      DB_HOST: db
+      NODE_ENV: ${NODE_ENV}
+    networks:
+      - back
+    depends_on:
+      - db
+    volumes:
+      - apk:/home/Back/apk
+
+  client_web:
+    build:
+      context: ./FrontWeb/
+      dockerfile: Dockerfile
+    environment:
+      VITE_NODE_ENV: ${NODE_ENV}
+    depends_on:
+      - server
+      - client_mobile
+    restart: always
+    ports:
+      - "8081:5173"
+
+  client_mobile:
+    build:
+      context: ./mobile/
+      dockerfile: Dockerfile
+    volumes:
+      - apk:/home/delivery
+
+networks:
+  back:
+
