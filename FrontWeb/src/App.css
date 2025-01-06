@@ -1,0 +1,70 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0rem;
+  text-align: center;
+}
+
+.imageCercle {
+  width: 1500px;
+  height: 1500px;
+  margin-left: -200px;
+  margin-top: 400px;
+}
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+.white-bg {
+  background-color: #fff;
+}
+
+@font-face {
+  font-family: 'merriweather';
+  src: url('./src/assets/font/MerriweatherSans.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./src/assets/font/Inter.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Londrina';
+  src: url('./src/assets/font/Londrina.ttf') format('truetype');
+}
+
+.hide-text {
+  display: none;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search-icon {
+  margin-right: 5px;
+  color: #555;
+}
+
+.text-inputArea {
+  border: none;
+  outline: none;
+  background: none;
+  flex: 1;
+  font-size: 16px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 0 25%;
+  max-width: 100%;
+}
