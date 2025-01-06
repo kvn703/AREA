@@ -26,8 +26,3 @@ cd Area
 ```
 docker-compose up
 ```
-
-## Contact
-
-Pour toute question ou commentaire, veuillez contacter l'équipe de développement à l'adresse suivante :
-`AreaEpitech@outlook.com`
